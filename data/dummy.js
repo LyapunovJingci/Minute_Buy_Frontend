@@ -6,7 +6,7 @@ const PRODUCTS = [
       'LEGO® NASA Apollo Saturn V',
       'Display and role-play with this majestic meter-high LEGO brick model of the NASA Apollo Saturn V. Packed with authentic details, it features 3 removable rocket stages, including the S-IVB third stage with the lunar lander and lunar orbiter. The set also includes 3 stands to display the model horizontally, 3 new-for-June-2017 astronaut microfigures for role-play recreations of the Moon landings, plus a booklet about the manned Apollo missions and the fan designers of this educational and inspirational LEGO Ideas set.',
       119.99,
-      'https://www.lego.com/cdn/cs/set/assets/bltbee7c9a8f81ee5ab/92176_alt1.jpg?fit=bounds&format=jpg',
+      'https://www.lego.com/cdn/cs/set/assets/bltbee7c9a8f81ee5ab/92176_alt1.jpg',
     ),
     new Product(
       'p2',

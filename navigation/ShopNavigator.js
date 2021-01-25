@@ -15,7 +15,7 @@ const ProductsNavigator = createStackNavigator(
             backgroundColor: Colors.primary
         },
         //headerTintColor: Platform.OS === 'android' ? 'white' : ''
-        headerTintColor: 'white' 
+        headerTintColor: Colors.light_background 
     }
     }
 );
