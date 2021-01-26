@@ -1,23 +1,38 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, Button } from 'react-native';
+import { View, Text, Image, StyleSheet, Button, TouchableOpacity, TouchableNativeFeedback, Platform } from 'react-native';
 import Colors from '../../constants/Colors'
 
 const ProductItem = props => {
-    return (<View style = {styles.product}>
-        <Image style = {styles.image} source={{uri: props.imageUrl}}/>
-        <Text style = {styles.name}>{props.name}</Text>
-        <Text style = {styles.price}>${props.price.toFixed(2)}</Text>
-        <View style = {styles.actions}>
-            <Button title = "View Details" onPress={props.onViewDetail} color= {Colors.primary}/>
-            <Button title = "Add to Cart" onPress={props.onAddToCart} color= {Colors.accent}/>
+
+    let TouchableComponent = TouchableOpacity;
+
+    if (Platform.OS === 'android' && Platform.Version >= 21) {
+      TouchableComponent = TouchableNativeFeedback;
+    }
+
+    return (
+        <View style = {styles.product}>
+            <View style={styles.touchable}>
+                <TouchableOpacity onPress={props.onViewDetail} useForeground>
+                    <View style = {styles.imagecontainer}>
+                        <Image style = {styles.image} source={{uri: props.imageUrl}}/>
+                    </View>
+                    <View style = {styles.details}>
+                        <Text style = {styles.name}>{props.name}</Text>
+                        <Text style = {styles.price}>${props.price.toFixed(2)}</Text>
+                    </View>
+                    <View style = {styles.actions}>
+                        <Button title = "View Details" onPress={props.onViewDetail} color= {Colors.primary}/>
+                        <Button title = "Add to Cart" onPress={props.onAddToCart} color= {Colors.accent}/>
+                    </View>
+                </TouchableOpacity>
+            </View>
         </View>
-    
-    </View>);
+    );
 };
 
 const styles = StyleSheet.create({
     product: {
-        padding: 10,
         shadowColor: Colors.dark_background,
         shadowOpacity: 0.25,
         shadowOffset: {width: 0, height: 2},
@@ -25,12 +40,12 @@ const styles = StyleSheet.create({
         elevation: 5,
         borderRadius: 10,
         backgroundColor: Colors.light_background,
-        height: 280,
+        height: 350,
         margin: 20
     },
     image: {
         width: '100%',
-        height: '60%'
+        height: '100%'
     },
     name: {
         marginVertical: 4,
@@ -47,8 +62,26 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+        height: '20%',
+        paddingHorizontal: 10
         
-    }
+    },
+    details: {
+        alignItems: 'center',
+        height: '15%',
+        padding: 10
+    },
+    imagecontainer: {
+        width: '100%',
+        height: '65%',
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
+        overflow: 'hidden'
+    },
+    touchable: {
+        borderRadius: 10,
+        overflow: 'hidden'
+      },
 });
 
 export default ProductItem;
