@@ -5,19 +5,21 @@ import { Provider } from 'react-redux';
 
 import productsReducer from './store/reducers/Products';
 import cartReducer from './store/reducers/cart'
+import ordersReducer from './store/reducers/orders'
 import ShopNavigator from './navigation/ShopNavigator';
 
 const rootReducer = combineReducers({
   Products: productsReducer,
-  cart: cartReducer
+  cart: cartReducer,
+  orders: ordersReducer
 });
 
 const store = createStore(rootReducer);
 
 export default function App() {
   return (
-    <Provider store = {store}>
-      <ShopNavigator></ShopNavigator>
+    <Provider store={store}>
+      <ShopNavigator />
     </Provider>
   );
 }
