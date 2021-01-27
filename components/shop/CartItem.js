@@ -7,6 +7,7 @@ import {
   Platform
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import Colors from '../../constants/Colors'
 
 const CartItem = props => {
   return (
@@ -21,7 +22,7 @@ const CartItem = props => {
           <Ionicons
             name={Platform.OS === 'android' ? 'md-trash' : 'ios-trash'}
             size={23}
-            color="red"
+            color={Colors.accent}
           />
         </TouchableOpacity>
       </View>
