@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, Button, TouchableOpacity, TouchableNativeFeedback, Platform } from 'react-native';
 import Colors from '../../constants/Colors'
+import CountDown from 'react-native-countdown-component';
 
 const ProductItem = props => {
 
@@ -16,13 +17,24 @@ const ProductItem = props => {
                 <TouchableOpacity onPress={props.onViewDetail} useForeground>
                     <View style = {styles.imagecontainer}>
                         <Image style = {styles.image} source={{uri: props.imageUrl}}/>
+                        
                     </View>
                     <View style = {styles.details}>
                         <Text style = {styles.name}>{props.name}</Text>
                         <Text style = {styles.price}>${props.price.toFixed(2)}</Text>
                     </View>
                     <View style = {styles.actions}>
-                        <Button title = "View Details" onPress={props.onViewDetail} color= {Colors.primary}/>
+                            <CountDown
+                                size={18}
+                                until={3600} 
+                                style={{alignItems: 'flex-start'}}
+                                digitStyle={{backgroundColor: Colors.primary}}
+                                digitTxtStyle={{color: Colors.light_background}}
+                                separatorStyle={{color: Colors.dark_background}}
+                                timeToShow={['H', 'M', 'S']}
+                                timeLabels={{h: 'Hours', m: 'Minutes', s: 'Seconds'}}
+                                showSeparator
+                            />
                         <Button title = "Add to Cart" onPress={props.onAddToCart} color= {Colors.accent}/>
                     </View>
                 </TouchableOpacity>
@@ -43,6 +55,13 @@ const styles = StyleSheet.create({
         height: 350,
         margin: 20
     },
+    imagecontainer: {
+        width: '100%',
+        height: '60%',
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
+        overflow: 'hidden'
+    },
     image: {
         width: '100%',
         height: '100%'
@@ -62,26 +81,19 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        height: '20%',
+        height: '25%',
         paddingHorizontal: 10
         
     },
     details: {
         alignItems: 'center',
         height: '15%',
-        padding: 10
-    },
-    imagecontainer: {
-        width: '100%',
-        height: '65%',
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10,
-        overflow: 'hidden'
+        padding: 10,
     },
     touchable: {
         borderRadius: 10,
         overflow: 'hidden'
-      },
+    },
 });
 
 export default ProductItem;
