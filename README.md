@@ -5,6 +5,14 @@ Minute Buy is a demo of an e-business platform providing limited time sale while
 
 ## 📝Package Usage
 
+* npm install react-redux
+* npm install react-navigation
+* npm install react-navigation-stack
+* npm install react-navigation-drawer
+* npm install react-navigation-header-buttons
+* npm install react-native-gesture-handler
+* npm install react-native-countdown-component
+* npm install moment
 
 ## 🎈Screenshots
 
