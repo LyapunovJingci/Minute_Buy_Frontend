@@ -1,6 +1,6 @@
 # Minute Buy
 
-Minute Buy is a demo of an e-business platform providing limited time sale while stock lasts. The frontend is built using React Native platform. I am still working on the backend of this demo.
+Minute Buy is a demo of an e-business platform providing limited time sale while stock lasts. The frontend is built using React Native framework. I am still working on the backend of this demo.
 
 
 ## 📝Package Usage
