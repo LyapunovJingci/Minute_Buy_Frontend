@@ -10,11 +10,11 @@ Minute Buy is a demo of an e-business platform providing limited time sale while
 
 ### Android Platform
 
-<img src="screenshots/android/main.png" width="20%">&#160;<img src="screenshots/android/detail.png" width="20%">&#160;<img src="screenshots/android/cart.png" width="20%">&#160;<img src="screenshots/android/drawer.png" width="19%">&#160;<img src="screenshots/android/order.png" width="19%">
+<img src="screenshots/android/main.png" width="19%">&#160;<img src="screenshots/android/detail.png" width="19%">&#160;<img src="screenshots/android/cart.png" width="19%">&#160;<img src="screenshots/android/drawer.png" width="19%">&#160;<img src="screenshots/android/order.png" width="19%">
 
 ### iOS Platform
 
-<img src="screenshots/ios/main.PNG" width="20%">&#160;<img src="screenshots/ios/detail.PNG" width="20%">&#160;<img src="screenshots/ios/cart.PNG" width="20%">&#160;<img src="screenshots/ios/drawer.PNG" width="19%">&#160;<img src="screenshots/ios/order.PNG" width="19%">
+<img src="screenshots/ios/main.PNG" width="19%">&#160;<img src="screenshots/ios/detail.PNG" width="19%">&#160;<img src="screenshots/ios/cart.PNG" width="19%">&#160;<img src="screenshots/ios/drawer.PNG" width="19%">&#160;<img src="screenshots/ios/order.PNG" width="19%">
 
 ## License
 
